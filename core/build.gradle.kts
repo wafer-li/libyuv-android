@@ -1,4 +1,5 @@
 import com.android.build.gradle.*
+import com.android.build.gradle.internal.cxx.configure.abiOf
 import org.jetbrains.dokka.gradle.DokkaTask
 import java.net.URI
 
@@ -36,6 +37,12 @@ android {
         minSdk = 14
         consumerProguardFiles("consumer-proguard-rules.pro")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            // Specifies the ABI configurations of your native
+            // libraries Gradle should build and package with your app.
+            abiFilters += listOf("arm64-v8a")
+        }
     }
 
     lint {
