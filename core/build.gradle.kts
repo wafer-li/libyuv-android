@@ -7,7 +7,6 @@ plugins {
     id("com.android.library")
     kotlin("android")
     id("org.jetbrains.dokka")
-    id("signing")
     id("maven-publish")
 }
 
@@ -186,10 +185,6 @@ afterEvaluate {
                 }
             }
         }
-    }
-
-    signing {
-        sign(publishing.publications.getByName("maven"))
     }
 }
 
