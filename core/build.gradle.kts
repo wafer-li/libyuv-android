@@ -80,7 +80,6 @@ android {
 
 dependencies {
     implementation(AndroidX.annotation)
-    implementation(AndroidX.camera.core)
 
     androidTestImplementation(AndroidX.test.runner)
     androidTestImplementation(AndroidX.test.rules)
